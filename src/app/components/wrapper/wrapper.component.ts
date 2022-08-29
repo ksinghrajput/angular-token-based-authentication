@@ -7,6 +7,8 @@ import { MainHeaderComponent } from '../main-header/main-header.component';
 })
 export class WrapperComponent implements OnInit {
 
+  isLogedIn = false;
+
   constructor() { }
 
   ngOnInit(): void {

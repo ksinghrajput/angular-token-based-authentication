@@ -10,6 +10,14 @@ import { DetailsComponent } from './components/details/details.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { WrapperComponent } from './components/wrapper/wrapper.component';
 import { MainHeaderComponent } from './components/main-header/main-header.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCardModule } from '@angular/material/card';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -19,11 +27,20 @@ import { MainHeaderComponent } from './components/main-header/main-header.compon
     DetailsComponent,
     PageNotFoundComponent,
     WrapperComponent,
-    MainHeaderComponent
+    MainHeaderComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatCardModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatButtonModule,
+    MatInputModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
