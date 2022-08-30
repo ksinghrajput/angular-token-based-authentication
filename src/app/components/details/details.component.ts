@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../../services/auth.service'
 
 @Component({
   selector: 'app-details',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailsComponent implements OnInit {
 
-  constructor() { }
+  userData: any;
+
+  constructor(private auth: AuthService) { }
 
   ngOnInit(): void {
+    this.auth.getUserDetails().subscribe(res => {
+      this.userData = JSON.parse(JSON.stringify(res))
+      console.log("Kishan", res);
+    })
   }
 
 }
